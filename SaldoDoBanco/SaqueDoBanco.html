@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Saque do banco </title>
+</head>
+<body>
+    <form>
+    <p> Esse é o valor do seu saldo: <input type="number" id="saldo" readonly value="5000"> </p>
+    <p> Digite o valor que você deseja retirar: <input type="number" id="saque"></p>
+    <button type="button" onclick="obterValor()"> Realizar Saque</button>
+    <p><input type="number" id="result" readonly></p>
+
+    </form>
+
+    <script>
+        alert("Vamos iniciar seu saque!");
+        function obterValor(){
+            let dinheiro = parseFloat(document.getElementById("saldo").value);
+            let sacado = parseFloat(document.getElementById("saque").value);
+            
+            if(saque <= saldo){
+                let operacao =(dinheiro) - (sacado);
+                parseFloat(document.getElementById("result").value = operacao);
+            }else{
+                alert("O valor que você tentou retirar é maior que o seu saldo!!");
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
